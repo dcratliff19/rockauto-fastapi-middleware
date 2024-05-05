@@ -20,6 +20,8 @@ search_year = "1995"
 search_model = "PICKUP"
 search_link = "https://www.rockauto.com/en/catalog/" + search_make + "," + search_year + "," + search_model
 
+## https://www.rockauto.com/en/catalog/TOYOTA,1995,PICKUP
+print(search_link)
 ```
 After making a request to `/engines` below, it will return a link that will have a unique ID on the end of it. It is unknown what this actually is, but I assume it is an internal reference ID of some kind for the categories and it's used in an effort to prevent webscraping (lolz pwn'd xD)
 
