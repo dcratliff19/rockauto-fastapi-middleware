@@ -125,7 +125,7 @@ async def get_sub_categories(search_link: str):
     sub_categories_list = []
 
     browser = mechanize.Browser()   
-    page_content = browser.open( search_link ).read()
+    page_content = browser.open( search_link).read()
     browser.close()
 
     soup = BeautifulSoup(page_content, features='html5lib').find_all('a', attrs={'class', 'navlabellink'})[5:]
