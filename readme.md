@@ -114,25 +114,25 @@ Response
     "manufacturer": "CONTINENTAL",
     "partnumber": "49032",
     "price": "$13.58",
-    "more_info": "https://www.rockauto.com/en/moreinfo.php?pk=1332831&cc=1278097&pt=10346"
+    "link": "https://www.rockauto.com/en/moreinfo.php?pk=1332831&cc=1278097&pt=10346"
   },
   {
     "manufacturer": "GATES",
     "partnumber": "38036",
     "price": "$15.67",
-    "more_info": "https://www.rockauto.com/en/moreinfo.php?pk=366351&cc=1278097&pt=10346"
+    "link": "https://www.rockauto.com/en/moreinfo.php?pk=366351&cc=1278097&pt=10346"
   },
   {
     "manufacturer": "ACDELCO",
     "partnumber": "38036",
     "price": "$22.79",
-    "more_info": "https://www.rockauto.com/en/moreinfo.php?pk=506481&cc=1278097&pt=10346"
+    "link": "https://www.rockauto.com/en/moreinfo.php?pk=506481&cc=1278097&pt=10346"
   },
   {
     "manufacturer": "ULTRA-POWER",
     "partnumber": "38036",
     "price": "Out of Stock",
-    "more_info": "https://www.rockauto.com/en/moreinfo.php?pk=8498176&cc=1278097&pt=10346"
+    "link": "https://www.rockauto.com/en/moreinfo.php?pk=8498176&cc=1278097&pt=10346"
   }
 ]
 ```
