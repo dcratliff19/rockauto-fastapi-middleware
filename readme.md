@@ -11,7 +11,8 @@ This API serves as a middleware between Rockauto and other applications. It uses
 
 # Examples usage
 
-For this example, we skip the makes, years, and models endpoints. These (along with `/engines`) can be assembled easily because they do not require any unique ids:
+For this example, we skip the `makes/`, `years/`, and `models/` endpoints. These (along with `/engines`) can be assembled easily because they do not require any unique ids and are present to fill things like form or search option drop downs in a web application.
+##### Example:
 ```python
 
 search_make = "TOYOTA"
