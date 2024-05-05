@@ -121,16 +121,36 @@ async def get_categories(search_link: str):
     return categories_list
 
 @rockauto_api.get("/sub_categories/{search_vehicle}")
-async def get_sub_categories(search_link: str, category: str):
+async def get_sub_categories(search_link: str):
     sub_categories_list = []
 
     browser = mechanize.Browser()   
-    page_content = browser.open( search_link + "," + category ).read()
+    page_content = browser.open( search_link ).read()
     browser.close()
 
     soup = BeautifulSoup(page_content, features='html5lib').find_all('a', attrs={'class', 'navlabellink'})[5:]
 
     for x in soup:
         sub_categories_list.append( {'sub_category': x.get_text(), 'link': 'https://www.rockauto.com' + str( x.get('href') ) })
+
+    return sub_categories_list
+
+
+@rockauto_api.get("/parts/{search_vehicle}")
+async def get_parts(search_link: str):
+    sub_categories_list = []
+
+    browser = mechanize.Browser()   
+    page_content = browser.open( search_link ).read()
+    browser.close()
+
+    soup = BeautifulSoup(page_content, features='html5lib').find_all('tbody', attrs={'class', 'listing-inner'})
+    
+    for s in soup:
+        manufacturer = s.find('span','listing-final-manufacturer')
+        partnumber = s.find('span','listing-final-partnumber')
+        price = s.find('span','listing-price')
+        more_info = s.find('a','ra-btn-moreinfo')
+        sub_categories_list.append( {'manufacturer': manufacturer.get_text(), 'partnumber': partnumber.get_text(), 'price': price.get_text(), 'more_info': more_info.get('href') })
 
     return sub_categories_list
